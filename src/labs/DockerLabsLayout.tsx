@@ -17,7 +17,7 @@ function DockerLabsLayout() {
   const path = useLocation().pathname;
   console.log(path);
   return (
-    <div className="my-8 mx-16">
+    <div className="my-8 mx-8 md:mx-16">
       {path === "/docker-labs" ? (
         <div>
           <Breadcrumb className="mb-5">

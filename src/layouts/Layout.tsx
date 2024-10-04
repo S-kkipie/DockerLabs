@@ -1,14 +1,15 @@
-import NavBar from "@/components/NavBar"
-import { Outlet } from "react-router-dom"
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
+import { Outlet } from "react-router-dom";
 
 function Layout() {
-
   return (
     <main className="">
-      <NavBar/>
+      <NavBar />
       <Outlet></Outlet>
+      <Footer />
     </main>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
