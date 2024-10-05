@@ -36,7 +36,14 @@ function DockerLabsLayout() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">
                     {labs.map((lab) => (
-                      <DropdownMenuItem key={lab}>{lab}</DropdownMenuItem>
+                      <Link
+                        to={
+                          "/docker-labs/" +
+                          lab.toLowerCase().split(" ").join("-")
+                        }
+                      >
+                        <DropdownMenuItem key={lab}>{lab}</DropdownMenuItem>
+                      </Link>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -44,7 +51,7 @@ function DockerLabsLayout() {
             </BreadcrumbList>
           </Breadcrumb>
           <h1 className="text-4xl font-bold mb-3">Docker Labs</h1>
-          <hr className="border-primary  mb-8"  />
+          <hr className="border-primary  mb-8" />
           <div className="flex gap-6 mt-3">
             {labs.map((lab) => (
               <Link
@@ -63,6 +70,5 @@ function DockerLabsLayout() {
     </div>
   );
 }
-
 
 export default DockerLabsLayout;

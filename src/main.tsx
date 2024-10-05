@@ -11,6 +11,7 @@ import Amor from "./labs/amor/Amor";
 import DockerLabsLayout from "./labs/DockerLabsLayout";
 import AnonymousPingu from "./labs/anonymouspingu/AnonymousPingu";
 import AguaDeMayo from "./labs/aguademayo/AguaDeMayo";
+import Los40Ladrones from "./labs/los40ladrones/Los40Ladrones";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
           {
             path: "anonymous-pingu",
             element: <AnonymousPingu/>
+          },
+          {
+            path: "los-40-ladrones",
+            element: <Los40Ladrones />
           }
         ]
       },
