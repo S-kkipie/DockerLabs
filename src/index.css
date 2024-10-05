@@ -1,9 +1,13 @@
+@import "@fontsource/cascadia-code/index.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~@fontsource/cascadia-code/index.css";
 * {
   font-family: "Cascadia Code";
+}
+a{
+  font-weight: 600;
+  color: hsl(var(--card-foreground));
 }
 @layer base {
   :root {

@@ -9,6 +9,7 @@ function CodeBash(props: { text: string }) {
         showLineNumbers={false}
         theme={dracula}
         codeBlock
+        
       />
     </div>
   );

