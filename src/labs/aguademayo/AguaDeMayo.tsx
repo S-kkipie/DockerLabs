@@ -63,7 +63,7 @@ function AguaDeMayo() {
           <h2 className="my-2 text-3xl font-bold">
             Comenzamos inicializando la maquina
           </h2>
-          <CodeBash text="sudo bash auto_deploy.sh amor.tar" />
+          <CodeBash text="sudo bash auto_deploy.sh aguademayo.tar" />
           <h2 className="mt-5  mb-2 text-3xl font-bold">Escaneo de puertos</h2>
           <p>Vamos a empezar el escaneo de puertos usando nmap</p>
           <CodeBash text="nmap -p- --open 172.17.0.2 -Pn" />
@@ -110,6 +110,9 @@ function AguaDeMayo() {
           <h2 className="mt-5  mb-2 text-3xl font-bold">Conexion a ssh</h2>
           <CodeBash text="sudo ssh agua@172.17.0.2" />
           <p>Y ya estamos dentro!</p>
+          <h2 className="mt-5  mb-2 text-3xl font-bold">
+            Escalado de privilegios
+          </h2>
           <p>Exploramos el entorno un poco... y con el comando: </p>
           <CodeBash text="sudo -l" />
           <p>Cuyo resultado es: </p>

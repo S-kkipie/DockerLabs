@@ -164,8 +164,8 @@ wrote extracted data to "secret.txt".'
           <p>
             Es un codigo en base64, lo desencriptamos en la pagina{" "}
             <a href="https://www.base64decode.org/es/">
-              https://www.base64decode.org/es/
-            </a>
+              www.base64decode.org
+            </a>{" "}
             Siendo el resultado el siguiente
           </p>
           <CodeBash text="eslacasadepinypon" />
