@@ -12,6 +12,7 @@ import DockerLabsLayout from "./labs/DockerLabsLayout";
 import AnonymousPingu from "./labs/anonymouspingu/AnonymousPingu";
 import AguaDeMayo from "./labs/aguademayo/AguaDeMayo";
 import Los40Ladrones from "./labs/los40ladrones/Los40Ladrones";
+import Bashpariencias from "./labs/bashpariencias/Bashpariencias";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
           {
             path: "los-40-ladrones",
             element: <Los40Ladrones />
+          },
+          {
+            path: "bashpariencias",
+            element: <Bashpariencias />
           }
         ]
       },
