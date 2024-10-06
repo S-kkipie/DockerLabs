@@ -52,7 +52,7 @@ function DockerLabsLayout() {
           </Breadcrumb>
           <h1 className="text-4xl font-bold mb-3">Docker Labs</h1>
           <hr className="border-primary  mb-8" />
-          <div className="flex gap-6 mt-3">
+          <div className="flex gap-6 items-center justify-center flex-wrap mt-3">
             {labs.map((lab) => (
               <Link
                 className="border rounded w-96 px-4 py-3 bg-card text-lg font-semibold"

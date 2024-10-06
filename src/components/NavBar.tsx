@@ -26,7 +26,9 @@ function NavBar() {
           <Button className="text-lg">LinkedIn</Button>
           <ModeToggle />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex gap-5">
+        <ModeToggle />
+
           <DropdownMenu>
             <DropdownMenuTrigger>
               <AlignJustify />
@@ -39,13 +41,10 @@ function NavBar() {
                 <a href="https://github.com/S-kkipie">Github</a>
               </DropdownMenuItem>
               <DropdownMenuItem>LinkedIn</DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                Theme <span> </span>
-                <ModeToggle />
-              </DropdownMenuItem>
+
             </DropdownMenuContent>
           </DropdownMenu>
+
         </div>
       </nav>
       <hr className="border-primary" />
