@@ -156,7 +156,7 @@ function Bashpariencias() {
     (carlos) NOPASSWD: /usr/bin/cat"
           />
           <p>
-            Revisamos el contenido de la carpeta oscar con privilegios de carlos
+            Revisamos el contenido de la carpeta carlos con privilegios de carlos
           </p>
           <CodeBash text="sudo -u carlos tree /home/carlos/" />
           <p>El resultado es</p>
@@ -170,8 +170,8 @@ function Bashpariencias() {
             Vemos que hay un archivo llamado password, como podemos usar cat
             como carlos lo usaremos para ver el contenido de ese archivo
           </p>
-          <CodeBash text="LFILE=/home/oscar/password" />
-          <CodeBash text='sudo -u oscar cat "$LFILE"' />
+          <CodeBash text="LFILE=/home/carlos/password" />
+          <CodeBash text='sudo -u carlos cat "$LFILE"' />
           <p>El contenido es</p>
           <CodeBash text="chocolateado" />
           <p>Parece ser la contraseña del usuario carlos en ssh</p>
